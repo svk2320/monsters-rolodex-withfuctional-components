@@ -9,9 +9,7 @@ class App extends Component {
     this.state = {
       name: 'Nithish'
     }
-  }
-
-
+  };
 
   render() {
     return (
@@ -19,7 +17,8 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi {this.state.name}</p>
-          <button>Change Name</button>
+          {/* shallow merge */}
+          <button onClick={() => {this.setState({name : 'nithi'})}}>Change Name</button>
         </header>
       </div>
     );
