@@ -17,7 +17,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi {this.state.name}</p>
-          {/* shallow merge */}
+          {/* shallow merge -> completly changes the state values */}
           <button onClick={() => {this.setState({name : 'nithi'})}}>Change Name</button>
         </header>
       </div>
