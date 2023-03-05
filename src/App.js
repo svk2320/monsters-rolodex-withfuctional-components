@@ -18,11 +18,15 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi {this.state.name}</p>
           {/* shallow merge -> completly changes the state values */}
-          <button onClick={() => {this.setState({name : 'nithi'})}}>Change Name</button>
+          <button onClick={() => {this.setState((state, props) => {
+            return {
+              name: 'Nithi'
+            }
+          }, () => {console.log(this.state)})}}>Change Name</button>
         </header>
       </div>
     );
   }
-}
+};
 
 export default App;
