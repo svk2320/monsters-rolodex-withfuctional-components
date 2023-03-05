@@ -7,23 +7,25 @@ class App extends Component {
     super();
 
     this.state = {
-      name: 'Nithish'
+      monsters:[
+        {
+          name: 'm01'
+        },
+        {
+          name: 'm02'
+        },
+      ]
     }
   };
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi {this.state.name}</p>
-          {/* shallow merge -> completly changes the state values */}
-          <button onClick={() => {this.setState((state, props) => {
-            return {
-              name: 'Nithi'
-            }
-          }, () => {console.log(this.state)})}}>Change Name</button>
-        </header>
+        {
+          this.state.monsters.map((monster) => {
+            return <h1>{monster.name}</h1>
+          })
+        }
       </div>
     );
   }
