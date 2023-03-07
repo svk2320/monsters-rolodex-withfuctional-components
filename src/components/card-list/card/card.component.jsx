@@ -1,6 +1,8 @@
 import './card.styles.css';
 
-const Card = ({ name, email, id}) => {
+const Card = ({ monster }) => {
+    const { name, email, id} = monster;
+
     return(
         <div className="card-container" key={id}>
             <img 
@@ -10,7 +12,7 @@ const Card = ({ name, email, id}) => {
             <h2>{name}</h2>
             <p>{email}</p>
         </div> 
-    )
+    );
 };
 
 export default Card;
